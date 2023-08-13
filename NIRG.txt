@@ -1,0 +1,81 @@
+Updates:-
++Removed App & Bluetooth Module
++Sensors Involved:NIR LED, Photodiode, LCD display
++NIR LED = Digital Output
++Photodiode = Analog Input (ADC converter)
++Resistors = LED(1K) + Photodiode(10K)
++How to blink NIR LED (continuous/delay-how_much) - Just connect to power pin (continuous)
++Find correct way to map the Analog Input to the right value to be further fed into regression equation - Use LDR1
+
+Doubts/Queries:-
+
++Polynomial Regression Expression
++Error due to Skin Thickness,Blood Components,Skin color
++Find different ways to vary photodiode voltage (Analog Input)
+
+
+Basic Outline:-
+1. Sensor module has two ends- NIR LED (emitter) & Photodiode (receiver)
+2. When light passes through earlobe, it gets attenuated by Glucose (mainly) present in Blood
+3. Photodiode returns a voltage value (analog)
+4. Arduino converts the voltage from analog to digital signal
+5. A no. of people are tested invasively & non-invasively simultaneously
+6. A Voltage-Glucose graph is obtained from this data
+7. ML Polynomial Regression is used to obtain a curve fit for the data and an equation relating Voltage and Glucose is obtained
+8. This equation is fed to the Arduino for returning a glucose value corresponding to any future voltage received
+
+Stages/Domains:-
+1. Circuit Design
+2. Arduino Code
+3. Proteus Simulation
+4. Blender Modeling
+5. Animation
+6. Hardware
+
+Possible Issues:-
+1. Dataset & Regression Equation (Research Paper)
+2. Circuit Connection
+3. Arduino Code
+4. Hardware Design (Simulation)
+
+Useful Content:-
+--However, as far as the research status goes, the measured value may be not highly correlated with the actual blood glucose value and the linear range is narrow, so subsequent algorithm correction should be required. For the sample part, individual differences (including age, skin color, skin condition, etc.) will cause large errors to the measurement results, resulting in the consistency, stability and reliability of the instrument not being strongly proved. As for the detection part, there are still some problems such as complicated detection means, harsh detection parts, a tedious detection process, high requirements for detection equipment, and large interference of background signals.
+--All in all, there is a trend to integrate a series of functional modules on wearable devices in the future, which requires interdisciplinary and cross-direction cooperation between biomaterials, medicine, computer science, electrochemistry and other fields. In this way, a more robust and reliable, more sensitive and efficient, more portable and comfortable, more intelligent and modern non-invasive monitoring and closed-loop drug-delivery device can be developed to meet market expectations.
+
+
+Links:-
+
+Proteus:
+https://youtu.be/Oo_2J2traQc
+https://www.google.com/search?q=is+it+easy+to+learn+proteus+for+simulation&oq=is+it+easy+to+learn+proteus+for+sim&aqs=chrome.2.69i57j33i160l2.18752j0j7&client=ms-android-oppo-rvo3&sourceid=chrome-mobile&ie=UTF-8#fpstate=ive&vld=cid:db8b0725,vid:4421WKxxhGk,st:0
+
+NIG:
+https://create.arduino.cc/projecthub/170406/diabetes-diagnosis-and-management-0d5291
+https://forum.arduino.cc/t/non-inversive-blood-glucose-monitor/671937/9
+https://aip.scitation.org/doi/10.1063/1.5116059
+
+https://www.yosnalab.com/article?project=Non-Invasive-blood-glucose-monitoring
+https://create.arduino.cc/projecthub/170406/diabetes-diagnosis-and-management-0d5291
+https://www.flux.ai/ramprakashvishnoi8/arduino-blood-glucose-meter-shield
+https://hackaday.io/project/5508-nirgm-non-invasive-nir-glucose-meter
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7731259/
+https://ieeexplore.ieee.org/document/9103375
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6116315/
+https://aip.scitation.org/doi/10.1063/1.5116059
+https://github.com/Jcheng777/Non-InvasiveIotDiabetesSensor
+
+https://github.com/praveenydv/Inter_IIT_techmeet2018
+https://github.com/AmiraMegahed/NonInvasive-Glucose-Level-Detector
+
+
+
+
+Equipments:
+https://octopart.com/
+Arduino:
+https://techexplorations.com/arduino/#t-1606089663039
+https://docs.arduino.cc/hardware/nano
+
+Udemy Credentials:
+Khwabkalra1@gmail.com
+Khwab001@
