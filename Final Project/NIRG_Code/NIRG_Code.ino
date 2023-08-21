@@ -1,19 +1,28 @@
 #include <LiquidCrystal.h>
+// This is the library for LCD panel
 int senRead= A0;
 int val = 0;
 int glucoselevel = 0;
 int arr[50];
 int counterelements = 0;
 int correctedglucoselevel = 0;
+// All the varialbles are mentioned above
 LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
+// We have activated the pins for lcd panel
 
+// We have two functions in arudiono code; setup and loop
 void setup() 
 {
   Serial.begin(9600);
+  // used for serial montior of arudino
   pinMode(senRead, INPUT);
+  // declared pin to give input, sensor will get input form this sensor.
   lcd.begin(16,2);
+  // initialising the led, 16 horizontally and 2 vertically
   lcd.clear( );
+  // clearing screen for the operation
 }
+// setup works only once, if there's no loop
 
 int average(int arry[50])
 {
@@ -26,7 +35,7 @@ int average(int arry[50])
   avg = sum / 50;
   return avg;
 }
-
+// the value from the above sensor in added 
 void loop() 
 { 
   val = analogRead(senRead);
@@ -56,7 +65,7 @@ void loop()
     lcd.setCursor(0,0);
     lcd.print("please put your");
     lcd.setCursor(0,1);
-    lcd.print("finger in sensor");
+    lcd.print("earlobe in sensor");
    }
    delay(20);
 }
