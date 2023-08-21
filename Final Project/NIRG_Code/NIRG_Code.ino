@@ -35,7 +35,7 @@ int average(int arry[50])
   avg = sum / 50;
   return avg;
 }
-// the value from the above sensor in added 
+// the value from the above sensor is taken and put in the below equation.
 void loop() 
 { 
   val = analogRead(senRead);
